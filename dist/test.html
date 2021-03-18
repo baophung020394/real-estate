@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@2.0.0"></script>
+    <title>Document</title>
+    <style>
+        .content__container {
+            width: 750px;
+            margin: auto;
+        }
+        .content__container .form-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .content__container .form-group label {
+            flex: 1 0 0;
+        }
+        .content__container .form-group .groups-select {
+            flex: 3 0 0;
+            position: relative;
+            z-index: 50;
+        }
+        .content__container .form-group .groups-select input {
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+        .content__container .form-group .groups-select input:focus {
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .content__container .form-group .groups-select .list {
+            display: none;
+            position: absolute;
+            top: 26px;
+            left: 0;
+            z-index: 20;
+            width: 100%;
+            border-top: none;
+            border: 1px solid #ccc;
+        }
+        .content__container .form-group .groups-select span {
+            display: block;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: Tahoma;
+            padding: 5px;
+        }
+        .content__container .form-group .groups-select span:hover {
+            background: #77baf2;
+        }
+        .light-bg {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="content__container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="">Label</label>
+                            <div class="groups-select">
+                                <input type="text" id="value-select">
+                                <div class="list">
+                                    <span>A</span>
+                                    <span>B</span>
+                                    <span>C</span>
+                                    <span>D</span>
+                                    <span>E</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="">Label</label>
+                            <div class="groups-select">
+                                <input type="text" id="value-select">
+                                <div class="list">
+                                    <span>A</span>
+                                    <span>B</span>
+                                    <span>C</span>
+                                    <span>D</span>
+                                    <span>E</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="light-bg"></div>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data: {
+                text: 'aaa'
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $('.groups-select input').on('click', function () {
+            $(this).find('~.list').show();
+            $('.light-bg').show();
+        });
+        $('.light-bg').on('click', function() {
+            $('.list').hide();
+            $(this).hide();
+        });
+        $('.list span').on('click', function() {
+            let value = $(this).text();
+            let valueSelect = $(this).parent().find('~#value-select').val();
+            valueSelect = value;
+            $(this).parent().parent().find('#value-select').val(value);
+        });
+    </script>
+</body>
+</html>
