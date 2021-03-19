@@ -61,4 +61,21 @@ $(document).ready(() => {
       },
     },
   });
+  $(".groups-select").on("click", function () {
+    // $(this).find('.list').removeClass('hide');
+    $(this).find(".list").show();
+    $(".light-bg").show();
+  });
+  $(".light-bg").on("click", function () {
+    $(".list").hide();
+    $(this).hide();
+  });
+  $(".list span").on("click", function () {
+    let value = $(this).text();
+    let valueSelect = $(this).parent().find("~#value-select").val();
+    valueSelect = value;
+    $(this).parent().parent().find("#value-select").val(value);
+    // $(this).parent().parent().find(".list").addClass("hide");
+    $('body .list').hide();
+  });
 });

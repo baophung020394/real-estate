@@ -35,6 +35,7 @@ h3.heading {
 /* Sidebar */
 .sidebar__container {
   overflow: hidden;
+  display: none;
 }
 .sidebar__container .widget__info {
   border: 1px solid #ccc;
@@ -764,6 +765,122 @@ h3.heading {
   font-size: 12px;
   font-family: Tahoma, sans-serif;
 }
+.content__container {
+  width: 750px;
+  margin: auto;
+}
+.content__container .form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.content__container .form-group label {
+  flex: 1 0 0;
+  font-family: Tahoma;
+  font-size: 12px;
+}
+.content__container .form-group select,
+.content__container .form-group .groups-select {
+  flex: 2 0 0;
+  position: relative;
+  z-index: 50;
+  background: url(https://file4.batdongsan.com.vn/images/opt/select-box-220.png)
+    no-repeat;
+  background-position: right 10px;
+}
+.content__container .form-group .groups-select input {
+  width: 100%;
+  border: none;
+  font-family: Tahoma;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background: url(https://file4.batdongsan.com.vn/images/opt/select-box-220.png)
+    no-repeat;
+  background-position: right 9px;
+}
+.content__container .form-group select:focus,
+.content__container .form-group .groups-select input:focus {
+  border: 1px solid #ccc;
+  outline: none;
+}
+.content__container .form-group .groups-select .list {
+  display: none;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  border-top: none;
+  border: 1px solid #ccc;
+}
+.content__container .form-group .groups-select span {
+  display: block;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Tahoma;
+  padding: 5px;
+}
+.content__container .form-group .groups-select.select input {
+  /* top: 0; */
+  user-select: none;
+  background: transparent !important;
+  color: #000 !important;
+}
+.content__container .form-group .groups-select .list.hide {
+    display: none !important;
+}
+.content__container .form-group input::placeholder {
+    color: #000;
+}
+.content__container .form-group input:focus::placeholder {
+    color:transparent;
+}
+.content__container .form-group .groups-select.select input:focus::placeholder {
+    color: unset;
+}
+.content__container .form-group .groups-select.dientich input {
+    width: 70%;
+    background-image: none;
+}
+.content__container .form-group .groups-select.dientich span {
+    display: inline-block;
+    font-size: 11px;
+    font-family: Tahoma;
+}
+.content__container .form-group .groups-select.gia input,
+.content__container .form-group .groups-select.donvi input,
+.content__container .form-group .groups-select.dientich input,
+.content__container .form-group .groups-select.gia,
+.content__container .form-group .groups-select.donvi,
+.content__container .form-group .groups-select.dientich {
+    background-image: none;
+}
+.content__container .tab-content .tab-pane {
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+}
+.content__container .tab-content h3 {
+  margin: -10px; 
+  padding: 0;
+}
+.light-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.content__container .form-group.title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.content__container .form-group.title input {
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
 /* End Dang Tin */
 @media (min-width: 768px) {
   /* content container */
@@ -827,7 +944,7 @@ h3.heading {
     border: none;
   }
   .content__tabs .tab-content .form-group.title .groups {
-    flex: 4 0 0;
+    flex: 5 0 0;
   }
   /* End Dang Tin */
 }
