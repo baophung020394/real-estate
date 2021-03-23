@@ -1,0 +1,529 @@
+/* General */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+p,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.all-grey-7,
+.all-grey-7 * {
+  color: #747c87;
+}
+.pad-top-8 {
+  padding-top: 8px;
+}
+.pad-bot-8 {
+  padding-bottom: 8px;
+}
+.mar-top-16 {
+  margin-top: 16px;
+}
+.container__left .breadcrumb {
+  line-height: 20px;
+}
+.container__left .breadcrumb span {
+  margin: 0 4px;
+  font-size: 17px;
+  transform: scale(0.855, 1);
+  display: inline-block;
+}
+.container__left .link-hover-blue a:hover,
+.container__left .link-hover-blue a:active {
+  color: #004e7f;
+  text-decoration: none;
+  border-bottom: 1px solid #004e7f;
+}
+.container__left .product-list-header h1 {
+  font-size: 25px;
+  line-height: 32px;
+  color: #2c2f36;
+}
+.container__left .product-item {
+  border: 1px solid #ebedf0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.product-item .product-image {
+  width: 224px;
+  min-height: 172px;
+  float: left;
+  position: relative;
+}
+.vip0.vipaddon .product-image:before,
+.vip1.vipaddon .product-image:before {
+  content: url(https://staticfile.batdongsan.com.vn/images/icons/new-hot-tag.svg);
+  position: absolute;
+  top: 8px;
+  left: -4px;
+  width: 76px;
+  height: 24px;
+  z-index: 9;
+}
+.product-item .product-image .product-avatar {
+  display: block;
+}
+.product-avatar.hover {
+  position: relative;
+  display: inline-block;
+}
+.vipaddon .product-image .product-avatar img:first-child {
+  width: 100%;
+  height: 172px;
+  margin-bottom: 2px;
+  border-radius: 4px 0 0 0;
+}
+.vipaddon .product-image .product-avatar img:nth-child(2n + 2) {
+  float: left;
+  border-radius: 0 0 0 4px;
+}
+.vipaddon .product-image .product-avatar img {
+  width: 111px;
+  height: 64px;
+  vertical-align: top;
+}
+.product-item .product-image .product-avatar img {
+  /* width: 100%; */
+  /* height: 100%; */
+  vertical-align: top;
+  object-fit: cover;
+}
+.product-item .product-image .product-avatar img {
+  object-fit: cover;
+}
+.product-avatar img.product-avatar-img {
+  padding-top: 0 !important;
+}
+.product-avatar .product-avatar-img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.vipaddon .product-image .product-avatar img:nth-child(2n + 2) {
+  float: left;
+  border-radius: 0 0 0 4px;
+}
+.vipaddon .product-image .product-avatar img:nth-child(2n + 3) {
+  float: right;
+}
+.product-list-new .vipaddon .product-avatar img:nth-child(2n + 2),
+.product-avatar img:nth-child(2n + 3) {
+  padding-top: 0;
+}
+.product-list-new .vipaddon .product-avatar img:nth-child(2n + 2),
+.product-avatar img:nth-child(2n + 3) {
+  width: 86px;
+  height: 57px;
+  padding-top: 3px;
+}
+.product-list-new .vipaddon .product-avatar img:nth-child(2n + 2),
+.product-avatar img:nth-child(2n + 3) {
+  width: 86px;
+  height: 57px;
+  padding-top: 0;
+}
+.vipaddon .product-image .product-avatar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.product-item .product-feature {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.product-item .product-image .product-media {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: #fff;
+  padding-right: 20px;
+  background: url(https://staticfile.batdongsan.com.vn/images/icons/16x16/Union.svg) no-repeat right 1px;
+  z-index: 3;
+}
+.product-item .product-image:after {
+  position: absolute;
+  height: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.48) 100%
+  );
+  content: "";
+  width: 100%;
+  z-index: 2;
+  border-radius: 0 0 0 4px;
+}
+.product-lists .product-main {
+    width: calc(100% - 224px);
+    float: right;
+    padding: 12px 16px 14px 16px;
+    overflow: hidden;
+}
+.product-lists .vip0 .product-title .product-link {
+    color: #c12f25;
+    text-indent: 20px;
+    text-transform: uppercase;
+    background: url(https://staticfile.batdongsan.com.vn/images/icons/16x16/ic_star.svg) no-repeat left 0;
+}
+.product-lists .product-title .product-link {
+    display: block;
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+.product-lists .product-info {
+    margin-bottom: 8px;
+}
+.product-lists .product-info .price, .product-lists .product-info .area {
+    font-weight: bold;
+}
+.product-lists .product-info span {
+    color: #2c2f36;
+    display: block;
+    float: left;
+}
+.product-lists .product-info .dot {
+    padding: 0 8px;
+}
+.product-lists .vipaddon .product-info .location {
+    display: block;
+    margin-top: 8px;
+    clear: both;
+}
+.product-lists .product-info:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.product-lists .vipaddon .product-content {
+    -webkit-line-clamp: 3;
+    height: 60px;
+}
+.product-lists .product-content {
+    color: #747c87;
+    display: -webkit-box;
+    height: 40px;
+    overflow: hidden !important;
+    -webkit-line-clamp: 2;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    line-height: 20px;
+}
+.product-lists .product-wrap {
+    position: absolute;
+    width: calc(100% - 224px);
+    bottom: 8px;
+    right: 0;
+    background: #fff;
+    padding: 0 16px;
+}
+.product-lists .product-wrap .product-uptime {
+    color: #747c87;
+    float: left;
+    width: 22%;
+    position: relative;
+    cursor: pointer;
+    line-height: 32px;
+}
+.product-lists .product-wrap .product-uptime .product-labeltime {
+    line-height: 32px !important;
+}
+.product-lists .product-wrap .product-uptime .tooltip-time {
+    visibility: hidden;
+    color: #fff;
+    background: rgba(10,13,20,.8);
+    border-radius: 4px;
+    padding: 6px 12px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 8px;
+    top: 0;
+    line-height: 20px;
+}
+.product-lists .product-wrap .product-contact {
+    float: right;
+    width: 78%;
+    text-align: right;
+}
+.product-lists .product-wrap .contact-name {
+    color: #2c2f36;
+    margin-right: 8px;
+    max-width: 153px;
+    display: inline-block;
+}
+.product-lists .product-wrap .contact-phone {
+    color: #fff;
+    padding: 6px 12px 6px 36px;
+    background-image: url(https://staticfile.batdongsan.com.vn/images/icons/16x16/filled/ic_phone.svg);
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    font-family: Roboto;
+    vertical-align: middle;
+    line-height: 20px !important;
+    height: 32px;
+}
+.btn-blue-7 {
+    background: #004e7f;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+[aria-label][role~="tooltip"] {
+    position: relative;
+}
+.tooltipMarking {
+    display: inline-block;
+    float: right;
+    margin: -5px 0 0 0;
+    max-height: 32px;
+    min-width: 40px;
+    right: -10px;
+}
+[aria-label][role~="tooltip"]::before, [aria-label][role~="tooltip"]::after {
+    line-height: 20px;
+}
+[role~="tooltip"][data-microtip-position|="bottom"]::before {
+    transform: translate3d(-50%,-10px,0);
+    bottom: auto;
+    left: 50%;
+    top: 100%;
+}
+[role~="tooltip"][data-microtip-position|="bottom"]::before {
+    background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%28180%2018%206%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E) no-repeat;
+    height: 6px;
+    width: 18px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+[aria-label][role~="tooltip"]::before {
+    background-size: 100% auto!important;
+    content: "";
+}
+[aria-label][role~="tooltip"]::before, [aria-label][role~="tooltip"]::after {
+    transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--microtip-transition-duration,.18s) var(--microtip-transition-easing,ease-in-out) var(--microtip-transition-delay,0s);
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 10;
+    transform-origin: top;
+}
+[aria-label][role~="tooltip"]::before, [aria-label][role~="tooltip"]::after {
+    line-height: 20px;
+}
+[role~="tooltip"][data-microtip-position|="bottom"]::after {
+    transform: translate3d(-50%,-10px,0);
+    top: 100%;
+    left: 50%;
+}
+[role~="tooltip"][data-microtip-position|="bottom"]::after {
+    margin-top: 11px;
+}
+[aria-label][role~="tooltip"]::after {
+    background: rgba(17,17,17,.9);
+    border-radius: 4px;
+    color: #fff;
+    content: attr(aria-label);
+    font-size: var(--microtip-font-size,13px);
+    font-weight: var(--microtip-font-weight,normal);
+    text-transform: var(--microtip-text-transform,none);
+    padding: .5em 1em;
+    white-space: nowrap;
+    box-sizing: content-box;
+}
+[aria-label][role~="tooltip"]::before, [aria-label][role~="tooltip"]::after {
+    transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--microtip-transition-duration,.18s) var(--microtip-transition-easing,ease-in-out) var(--microtip-transition-delay,0s);
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 10;
+    transform-origin: top;
+}
+[role~="tooltip"][data-microtip-position|="bottom"]:hover::before {
+    transform: translate3d(-50%,0,0);
+}
+[aria-label][role~="tooltip"]:hover::before, [aria-label][role~="tooltip"]:hover::after, [aria-label][role~="tooltip"]:focus::before, [aria-label][role~="tooltip"]:focus::after {
+    opacity: 1;
+    pointer-events: auto;
+}
+[role~="tooltip"][data-microtip-position="bottom"]:hover::after {
+    transform: translate3d(-50%,0,0);
+}
+
+.iconSave {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    display: inline-block;
+    margin-right: 0;
+    margin-top: 0 !important;
+    cursor: pointer;
+    background: url(https://staticfile.batdongsan.com.vn/images/icons/24x24/outlined/ic_save.svg) no-repeat center center;
+}
+.product-item:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgb(3 44 71 / 12%);
+}
+.iconSave:hover, #divUserStt .notification:hover {
+    background-color: #ebedf0;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.box-common {
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0 16px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.box-common-border {
+    border: 1px solid #ebedf0;
+}
+.box-common .box-title {
+    padding: 10px 0;
+    box-shadow: inset 0 -1px 0 #ebedf0;
+    font-weight: 500;
+    color: #2c2f36;
+}
+.box-common .box-content {
+    padding: 12px 0;
+    position: relative;
+}
+.box-common .box-content ul {
+    overflow: hidden;
+}
+.box-common .box-content li {
+    color: #474d57;
+    margin-bottom: 4px;
+}
+.box-common .box-content li a {
+    color: #474d57;
+    font-weight: 400;
+}
+.box-common li a:hover {
+    color: #004e7f;
+}
+.link-hover-blue a:hover, .link-hover-blue a:active {
+    color: #004e7f;
+    text-decoration: none;
+    border-bottom: 1px solid #004e7f;
+}
+.box-common-filled {
+    background: #f5f6f7;
+}
+.box-common .box-title {
+    padding: 10px 0;
+    box-shadow: inset 0 -1px 0 #ebedf0;
+    font-weight: 500;
+    color: #2c2f36;
+}
+.pagination {
+    border: 1px solid #ccd3d9;
+    box-sizing: border-box;
+    border-radius: 40px;
+    display: inline-block;
+    margin: 16px 0;
+}
+.pagination a:first-child {
+    border-radius: 40px 0 0 40px;
+}
+.pagination a img {
+    vertical-align: middle;
+}
+.pagination a {
+    display: inline-block;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    background: #fff;
+    color: #000;
+}
+.pagination a:last-child {
+    border-radius: 0 40px 40px 0;
+}
+.pagination a.actived {
+    color: #004e7f;
+    background: #edf7ff;
+}
+.pagination a:hover {
+    background: #f5f6f7;
+    color: #2c2f36;
+}
+/* End Seach*/
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+  /* Search */
+  .sidebars {
+    width: 216px;
+  }
+    
+}
+  /* End Seach */
+@media (min-width: 1024px) {
+  .container {
+    width: 1024px;
+    max-width: 1024px;
+  }
+  /* End Rever */
+}
+@media (min-width: 1200px) {
+  /* Rever */
+  /* End Rever */
+}
+@media (min-width: 1300px) {
+}

@@ -35,7 +35,7 @@ h3.heading {
 /* Sidebar */
 .sidebar__container {
   overflow: hidden;
-  display: none;
+  /* display: none; */
 }
 .sidebar__container .widget__info {
   border: 1px solid #ccc;
@@ -735,7 +735,7 @@ h3.heading {
   font-size: 12px;
   color: #666;
 }
-.content__tabs .tab-content .title label .redfont {
+.content__tabs .redfont {
   color: red;
 }
 .content__tabs .tab-content .form-group {
@@ -767,7 +767,6 @@ h3.heading {
 }
 .content__container {
   width: 750px;
-  margin: auto;
 }
 .content__container .form-group {
   display: flex;
@@ -778,6 +777,7 @@ h3.heading {
   flex: 1 0 0;
   font-family: Tahoma;
   font-size: 12px;
+  color: #666;
 }
 .content__container .form-group select,
 .content__container .form-group .groups-select {
@@ -798,6 +798,8 @@ h3.heading {
   background: url(https://file4.batdongsan.com.vn/images/opt/select-box-220.png)
     no-repeat;
   background-position: right 9px;
+  height: 27px;
+  line-height: 27px;
 }
 .content__container .form-group select:focus,
 .content__container .form-group .groups-select input:focus {
@@ -826,6 +828,8 @@ h3.heading {
   user-select: none;
   background: transparent !important;
   color: #000 !important;
+  height: 27px;
+  line-height: 27px;
 }
 .content__container .form-group .groups-select .list.hide {
     display: none !important;
@@ -847,6 +851,8 @@ h3.heading {
     display: inline-block;
     font-size: 11px;
     font-family: Tahoma;
+    padding-left: 0;
+    margin-left: -4px;
 }
 .content__container .form-group .groups-select.gia input,
 .content__container .form-group .groups-select.donvi input,
@@ -856,13 +862,15 @@ h3.heading {
 .content__container .form-group .groups-select.dientich {
     background-image: none;
 }
-.content__container .tab-content .tab-pane {
+
+.content__container .tab-content .tab-pane .boxs {
   border: 1px solid #ccc;
-  padding: 10px 10px;
+  padding: 40px 10px 10px;
+  position: relative;
+  margin-bottom: 15px;
 }
-.content__container .tab-content h3 {
-  margin: -10px; 
-  padding: 0;
+.content__container .form-group.total label {
+  font-weight: normal;
 }
 .light-bg {
   display: none;
@@ -880,6 +888,379 @@ h3.heading {
 .content__container .form-group.title input {
   border-radius: 0;
   border: 1px solid #ccc;
+}
+.content__container .tab-content h3 {
+  line-height: 40px;
+  height: 40px;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin: 0;
+  
+}
+.content__container .box-mota {
+  padding: 10px 0 0 20px;
+}
+.content__container .box-mota p {
+  font-size: 12px;
+  font-family: Tahoma;
+  color: #666;
+  margin-bottom: 10px;
+}
+.content__container .box-mota .group-textara {
+  display: flex;
+  flex-direction: row;
+}
+.content__container .box-mota .group-textara textarea {
+  flex: 2 0 0;
+}
+.content__container .box-mota .group-textara .mess {
+  flex: 1 0 0;
+  margin-left: 5px;
+  text-align: justify;
+}
+.content__container .box-mota .group-textara .mess .text {
+  font-family: Tahoma;
+  font-size: 12px;
+  color: #666;
+}
+.content__container  .row-container {
+  display: flex;
+  flex-direction: column;
+}
+.content__container  .row-container .right .form-group,
+.content__container  .row-container .left .form-group {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+}
+.content__container  .row-container .right .form-group label,
+.content__container  .row-container .left .form-group label {
+  flex: 1 0 0;
+}
+.content__container  .row-container .right .form-group input,
+.content__container  .row-container .right .form-group select,
+.content__container  .row-container .left .form-group select,
+.content__container  .row-container .left .form-group input {
+  flex: 2 0 0;
+  width: 100%;
+  height: 27px;
+  line-height: 27px;
+  font-family: Tahoma;
+  font-size: 12px;
+}
+.content__container  .form-group textarea {
+  flex: 5.1 0 0;
+}
+.content__container  .row-container .form-group select {
+  background-image: none;
+}
+.content__container  .boxs .group-textara textarea,
+.content__container  .row-container .form-group select,
+.content__container  .box-mota .form-group textarea,
+.content__container  .row-container .form-group input {
+  border: 1px solid #ccc;
+}
+.content__container  .boxs .group-textara textarea:focus,
+.content__container  .row-container .form-group select:focus,
+.content__container  .box-mota .form-group textarea:focus,
+.content__container  .row-container .form-group input:focus {
+  outline: none;
+}
+.content__container  .row-container .form-group label {
+  font-family: Tahoma;
+  font-size: 12px;
+  color: #666;
+}
+.content__container  .box-mota .form-group input {
+  border: 1px solid #ccc;
+  line-height: 27px;
+  height: 27px;
+  color: #000;
+  font-family: Tahoma;
+  flex: 5 0 0;
+  font-size: 12px;
+  padding: 1px;
+}
+.content__container  .box-mota .form-group input:focus {
+  outline: none;
+}
+.content__container  .box-mota .form-group input::placeholder {
+  color: #000;
+  font-family: Tahoma;
+  font-size: 12px;
+
+}
+.content__container  .box-mota .form-group.email,
+.content__container  .box-mota .form-group.phone {
+  justify-content: flex-start;
+}
+.content__container  .box-mota .form-group.email label,
+.content__container  .box-mota .form-group.phone .groups-select,
+.content__container  .box-mota .form-group.phone input,
+.content__container  .box-mota .form-group.phone label {
+  flex: unset;
+}
+
+.content__container  .box-mota .form-group.phone label {
+  margin-right: 53px;
+}
+.content__container  .box-mota .form-group.email label {
+  margin-right: 80px;
+}
+.content__container  .box-mota .form-group.email .groups-select input,  
+.content__container  .box-mota .form-group.email .groups-select,
+.content__container  .box-mota .form-group.phone .groups-select,
+.content__container  .box-mota .form-group.phone input {
+  width: 200px;
+}
+
+.content__container  .box-mota .form-group.phone input {
+  padding-left: 5px;
+}
+.content__container  .box-mota .form-group.email .groups-select,
+.content__container  .box-mota .form-group.email .groups-select input {
+  background-image: none;
+}
+.content__container  .box-mota .form-group.email label,
+.content__container  .box-mota .form-group.email .groups-select {
+  flex: unset;
+}
+.content__container  .box-mota .form-group.note p {
+  flex: 5 0 0;
+}
+.content__container .box-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content__container .box-date .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content__container .box-date .form-group select,
+.content__container .box-date .form-group input {
+  background-image: none;
+  font-family: Tahoma;
+  color: #000;
+  font-size: 12px;
+  line-height: 27px;
+  height: 27px;
+  padding: 5px 0;
+  min-width: 145px;
+}
+.content__container .box-date .form-group label {
+  margin-bottom: 5px;
+}
+.content__container .boxs #vip_cofig_info_explain {
+  font-family: Tahoma;
+  font-size: 12px;
+  color: #666;
+}
+.addoninfo {
+  color: #222;
+  margin: 10px 0;
+}
+.more-auto-up-free {
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+  margin: 10px 0;
+}
+.more-auto-up-free span.checked {
+    background: url(https://file4.batdongsan.com.vn/images/Icons/hot/checked.png) no-repeat center center;
+}
+.more-auto-up-free span {
+  display: inline-block;
+  width: 23px;
+  line-height: 23px;
+  height: 23px;
+  font-size: 14px;
+  border: 1px solid #b7b7b7;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  margin-right: 10px;
+}
+.addoninfo a {
+  color: #055699;
+  text-decoration: underline;
+}
+#auto-up-free-dess {
+  color: #666;
+  padding-left: 35px;
+}
+.auto-up-dess-active {
+  color: #390!important;
+}
+.moreaddon {
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+  margin: 10px 0;
+}
+.moreaddon span {
+  display: inline-block;
+  width: 23px;
+  line-height: 23px;
+  height: 23px;
+  font-size: 14px;
+  border: 1px solid #b7b7b7;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  margin-right: 10px;
+}
+.moreaddon input {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 25px;
+}
+.addon-money {
+  color: #666;
+  padding-left: 35px;
+}
+.vip_cofig_info {
+  display: block;
+  clear: both;
+}
+.post-product .product-vipconfig .product-unitprice, .post-product .product-vipconfig .product-totaldate,  .product-unitprice,  .product-totaldate {
+  float: left;
+  width: 50%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+.post-product .product-vipconfig .product-unitprice label, .post-product .product-vipconfig .product-totaldate label {
+  color: #222;
+}
+ .product-unitprice span,  .product-totaldate span {
+  color: #055699;
+}
+.post-product .product-vipconfig .product-unitprice span, .post-product .product-vipconfig .product-totaldate span,  .product-unitprice span,  .product-totaldate span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.vip_cofig_info {
+  display: block;
+  clear: both;
+}
+.product-vipnotice div {
+  font-size: 11px;
+  font-family: Tahoma;
+  color: #666;
+}
+.product-vipnotice img {
+  float: left;
+  margin-right: 10px;
+}
+.money {
+  color: #f00;
+  display: inline;
+  font-size: 13px;
+  font-family: Tahoma;
+  display: inline-block;
+  font-weight: bold;
+}
+#lblNoteVAT {
+  border-top: 1px solid #ccc;
+  color: #666;
+  margin-left: -10px;
+    margin-right: -10px;
+    padding: 0 27px;
+    font-size: 12px;
+  font-family: Tahoma;
+}
+.groups-submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.groups-submit .btn-blue {
+  border-radius: 6px;
+    margin: 0 5px;
+    border: 0;
+    height: 35px;
+    color: #fff!important;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+    padding: 0 15px;
+    background-image: url(https://content.batdongsan.com.vn/Images/userpage2016/bg-blue-button.png);
+}
+.groups-submit .btn-red {
+  border-radius: 6px;
+    margin: 0 5px;
+    border: 0;
+    height: 35px;
+    color: #fff!important;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+    padding: 0 15px;
+    background-image: url(https://content.batdongsan.com.vn/Images/userpage2016/bg-ogrange-button.png);
+}
+.content__container .pt-5 {
+  font-size: 12px;
+  font-family: Tahoma;
+}
+.content__container .thue-dangtin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 10px 0 10px;
+}
+.content__container .thue-dangtin div {
+  flex: 1 0 0;
+  width: 47%;
+  max-width: 47%;
+}
+.content__container .thue-dangtin .form-group {
+  align-items: center;
+}
+.content__container .thue-dangtin .form-group input {
+  border: 1px solid #ccc;
+  flex: 3 0 0;
+  font-size: 12px;
+  font-family: Tahoma;
+  line-height: 27px;
+  height: 27px;
+}
+.content__container .thue-lienhe .form-group {
+  justify-content: flex-start;
+}
+.content__container .thue-lienhe .form-group label {
+  flex: unset;
+  width: 100px;
+  margin-right: 0 !important;
+}
+.content__container .thue-lienhe .form-group input {
+  width: 200px;
+  flex: unset
+}
+.content__container .thue-lienhe .email #lblchkReceiEmail {
+  font-family: Tahoma;
+    font-size: 12px;
+    margin: 0;
+    text-decoration: none;
+    width: 200px;
+    margin-left: 10px;
+    padding-top: 6px;
+}
+.content__container .thue-lienhe .email #lblchkReceiEmail input {
+  width: auto;
+  height: auto;
+  line-height: unset;
+}
+.clear {
+  clear: both;
+  height: 0;
 }
 /* End Dang Tin */
 @media (min-width: 768px) {
@@ -909,6 +1290,20 @@ h3.heading {
     width: 740px;
     background-position: 115px 0;
     padding-top: 0;
+  }
+  .content__container .row-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .row-container .right,
+  .row-container .left {
+    flex: 1 0 0;
+  }
+  .row-container .right {
+    padding: 5px 0 5px 5px;
+  }
+  .row-container .left {
+    padding: 5px 5px 5px 0;
   }
   /* End Dang Tin */
 }
@@ -944,8 +1339,9 @@ h3.heading {
     border: none;
   }
   .content__tabs .tab-content .form-group.title .groups {
-    flex: 5 0 0;
+    flex: 5.2 0 0;
   }
+ 
   /* End Dang Tin */
 }
 @media (min-width: 1024px) {
