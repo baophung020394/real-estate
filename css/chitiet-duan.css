@@ -165,7 +165,7 @@ h3.heading {
   overflow: hidden;
 }
 .rever__detail .rever__detail--left .rever__detail--viewmore.active {
-  height: 100%;
+  height: auto;
 }
 .rever__detail .rever__detail--left .collapses {
   display: none;
@@ -1222,6 +1222,9 @@ h3.heading {
   display: inline-block;
   position: relative;
   text-align: center;
+}
+.rever__detail.rever__buy .detail-more {
+  border-bottom: none;
 }
 /* End Detail duan mua */
 /* Loadmore content */
